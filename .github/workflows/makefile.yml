@@ -1,0 +1,48 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: update
+      run: sudo apt update
+    - name: get app
+      run: apt install make gcc-arm-linux-gnueabihf gcc bison flex libssl-dev dpkg-dev lzop
+      
+    - name: setenv1
+      run: export FIRE_BOARD=ebf_imx_6ull_mini
+    - name: setenv2
+      run: export LINUX=4.19.35
+    - name: setenv3
+      run: UBOOT=2020.10
+    - name: setenv4
+      run: export DISTRIBUTION=Debian
+    - name: setenv5
+      run: export DISTRIB_RELEASE=buster
+    - name: setenv6
+      run: export DISTRIB_ARCH=armhf
+    - name: setenv7
+      run: export DISTRIB_RELEASE=buster
+    - name: setenv8
+      run: export INSTALL_TYPE=ALL
+    - name: Make
+      run: make 
+    - name: Prepare artifact
+      run: |
+        mkdir -p ./artifact/firmware
+        cp -rf $(find ./deploy/* -type f -name "*.img") ./artifact/firmware/
+    - name: Deliver firmware
+      uses: actions/upload-artifact@v2
+      with:
+        name: CLtest
+        path: ./deploy
