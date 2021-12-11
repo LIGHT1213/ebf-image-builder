@@ -33,7 +33,7 @@ imx6ull_build_img(){
     rebuild=$1
 
     #编译镜像 debian console
-    FIRE_BOARD=ebf_imx_6ull_pro
+    FIRE_BOARD=ebf_imx_6ull_mini
     LINUX=4.19.35
     UBOOT=2020.10
     DISTRIBUTION=Debian
@@ -43,7 +43,7 @@ imx6ull_build_img(){
     make  DOWNLOAD_MIRROR=china  FORCE_UPDATE=$rebuild
 
     #编译镜像 debian qt
-    FIRE_BOARD=ebf_imx_6ull_pro
+    FIRE_BOARD=ebf_imx_6ull_mini
     LINUX=4.19.35
     UBOOT=2020.10
     DISTRIBUTION=Debian
@@ -53,7 +53,7 @@ imx6ull_build_img(){
     make  DOWNLOAD_MIRROR=china 
 
     #ubuntu18.04  console
-    FIRE_BOARD=ebf_imx_6ull_pro
+    FIRE_BOARD=ebf_imx_6ull_mini
     LINUX=4.19.35
     UBOOT=2020.10
     DISTRIBUTION=Ubuntu
@@ -63,7 +63,7 @@ imx6ull_build_img(){
     make  DOWNLOAD_MIRROR=china 
 
     #ubuntu20.04  console
-    FIRE_BOARD=ebf_imx_6ull_pro
+    FIRE_BOARD=ebf_imx_6ull_mini
     LINUX=4.19.35
     UBOOT=2020.10
     DISTRIBUTION=Ubuntu
