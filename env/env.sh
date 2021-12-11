@@ -14,4 +14,4 @@ export INSTALL_TYPE=ALL
     DISTRIB_RELEASE=buster
     DISTRIB_TYPE=console
     INSTALL_TYPE=ALL
-    make  DOWNLOAD_MIRROR=china  FORCE_UPDATE=$rebuild
+    make   FORCE_UPDATE=$rebuild
