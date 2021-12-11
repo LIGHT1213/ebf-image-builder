@@ -20,21 +20,21 @@ jobs:
       run: sudo apt install make gcc-arm-linux-gnueabihf gcc bison flex libssl-dev dpkg-dev lzop
       
     - name: setenv1
-      run: sudo export FIRE_BOARD=ebf_imx_6ull_mini
+      run:  export FIRE_BOARD=ebf_imx_6ull_mini
     - name: setenv2
-      run: sudo export LINUX=4.19.35
+      run: export LINUX=4.19.35
     - name: setenv3
       run: UBOOT=2020.10
     - name: setenv4
-      run: sudo export DISTRIBUTION=Debian
+      run: export DISTRIBUTION=Debian
     - name: setenv5
-      run: sudo export DISTRIB_RELEASE=buster
+      run: export DISTRIB_RELEASE=buster
     - name: setenv6
-      run: sudo export DISTRIB_ARCH=armhf
+      run: export DISTRIB_ARCH=armhf
     - name: setenv7
-      run: sudo export DISTRIB_RELEASE=buster
+      run:  export DISTRIB_RELEASE=buster
     - name: setenv8
-      run: sudo export INSTALL_TYPE=ALL
+      run: export INSTALL_TYPE=ALL
     - name: Make
       run: make 
     - name: Prepare artifact
