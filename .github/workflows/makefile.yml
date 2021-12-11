@@ -35,6 +35,8 @@ jobs:
       run:  export DISTRIB_RELEASE=buster
     - name: setenv8
       run: export INSTALL_TYPE=ALL
+    - name: setenv9
+      run: source
     - name: Make
       run: make 
     - name: Prepare artifact
