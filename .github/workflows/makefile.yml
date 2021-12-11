@@ -20,7 +20,7 @@ jobs:
       run: sudo apt install make gcc-arm-linux-gnueabihf gcc bison flex libssl-dev dpkg-dev lzop
       
     - name: setenv
-      run: ./env/ci.sh
+      run: source ./env/env.sh
         
     - name: Make
       run: make 
