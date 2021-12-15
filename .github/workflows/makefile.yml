@@ -28,7 +28,7 @@ jobs:
         export DISTRIB_RELEASE="buster"
         export DISTRIB_TYPE="console"
         export INSTALL_TYPE="ALL"
-        env
+        make
     - name: Make
       run: 
         env
