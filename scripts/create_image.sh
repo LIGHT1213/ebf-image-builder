@@ -36,12 +36,12 @@ mkdir -p history/${target_name}/${DISTRIBUTION}/${time}/kernel_deb
 mkdir -p history/${target_name}/${DISTRIBUTION}/${time}/rootfs/${DISTRIB_TYPE}
 mkdir -p history/tempdir/$(date +%Y-%m)/${DISTRIBUTION}/${DISTRIB_RELEASE}
 
-if [ "$USER" != 'root' ]; then
-	echo "Building rootfs stage requires root privileges, please enter your passowrd:"
-	read PASSWORD
-else
-	PASSWORD=
-fi
+# if [ "$USER" != 'root' ]; then
+# 	echo "Building rootfs stage requires root privileges, please enter your passowrd:"
+# 	read PASSWORD
+# else
+# 	PASSWORD=
+# fi
 
 
 #build tfa
