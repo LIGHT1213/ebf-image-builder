@@ -28,8 +28,10 @@ jobs:
         export DISTRIB_RELEASE="buster"
         export DISTRIB_TYPE="console"
         export INSTALL_TYPE="ALL"
+        env
     - name: Make
-      run: env 
+      run: 
+        env
     - name: Prepare artifact
       run: |
         mkdir -p ./artifact/firmware
